@@ -1,5 +1,5 @@
-import telebot
-import requests
+from flask import Flask
+from threading import Thread
 
 TOKEN = "8369874856:AAE412WE2psv5tRzCxEe50LK9Z2C9TT22Y8"
 ADMIN_ID = 5070261597
@@ -29,3 +29,17 @@ def send_welcome(message):
 
 print("Bot muvaffaqiyatli ishga tushdi!")
 bot.polling()
+app = Flask('')
+
+@app.route('/')
+def home():
+    return "Bot ishlayapti!"
+
+def run():
+    app.run(host='0.0.0.0', port=8080)
+
+def keep_alive():
+    t = Thread(target=run)
+    t.start()
+
+keep_alive()
