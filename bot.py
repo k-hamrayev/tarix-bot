@@ -1,7 +1,7 @@
 import telebot
 import requests
 
-TOKEN = "8369874856:AAEtablMMjC4QAviiQGeO6GrPfuRh9kWyA"
+TOKEN = "8369874856:AAEnnZoweW1MZdSsz0ehs2jz0Bsy2ERVrOw"
 ADMIN_ID = 5070261597
 
 # Eski webhookni tozalash
